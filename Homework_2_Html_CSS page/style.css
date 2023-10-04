@@ -1,0 +1,23 @@
+body {
+            font-family: Arial, sans-serif,text-align: center;font-color:#8B0000: background-color:#FFE4E1;letter-cpacing:5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+	    
+	text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 2px solid red;
+        }
+
+        th {
+            background-color: #8B0000;
+        }
+
+        h1 {
+            text-align: center;
+        }
