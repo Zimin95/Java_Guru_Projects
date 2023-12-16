@@ -3,6 +3,7 @@
     <test name="All Tests">
     <packages>
         <package name="classworks"/>
+
     </packages>
     </test>
     <listeners>
