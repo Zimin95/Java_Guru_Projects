@@ -20,10 +20,10 @@ public class aliExpressPrintListTest {
           WebElement searchField = driver.findElement(By.xpath("//input[@class='search--keyword--15P08Ji']"));
         String inputText = "Tattoo";
         searchField.sendKeys(inputText);
-
+        sleep(5000);
          WebElement addCloseButton = driver.findElement(By.className("pop-close-btn"));
         addCloseButton.click();
-        sleep(5000);
+
          WebElement searchButton = driver.findElement(By.xpath("//input[@class='search--submit--2VTbd-T']"));
         searchButton.click();
 
