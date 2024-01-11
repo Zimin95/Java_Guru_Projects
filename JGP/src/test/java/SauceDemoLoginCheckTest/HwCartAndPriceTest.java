@@ -1,7 +1,11 @@
  package SauceDemoLoginCheckTest;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +22,6 @@ public class HwCartAndPriceTest extends BaseTest {
         loginButton.click();
 
 
-
         WebElement backPackAddToCardButton = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
         backPackAddToCardButton.click();
 
@@ -28,15 +31,17 @@ public class HwCartAndPriceTest extends BaseTest {
         WebElement shoppingCartButton = driver.findElement(By.id("shopping_cart_container"));
         shoppingCartButton.click();
 
-        WebElement backpackExpectedPrice = driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div"));
+        WebElement backpackExpectedPrice = driver.findElement(By.xpath("//div[@class='inventory_item_price'][1]"));
         WebElement backpackPriceInCart = driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div"));
 
-        WebElement bikeLightExpectedPrice = driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div"));
+        WebElement bikeLightExpectedPrice = driver.findElement(By.xpath("//div[@class='inventory_item_price'][text()='9.99']"));
         WebElement bikeLightPriceInCart = driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div[1]/div[4]/div[2]/div[2]/div"));
 
 
         Assert.assertEquals(backpackExpectedPrice,backpackPriceInCart);
         Assert.assertEquals(bikeLightExpectedPrice,bikeLightPriceInCart);
+
+
 
 
 
